@@ -79,5 +79,5 @@ El backend está configurado para recibir requests del frontend Angular en puert
 ## 🔗 Equipo de desarrollo MVPP (Muy viernes para programar)
 Zacagnino Antonella - Reverol Gerarlis - Salva ivan - Singuri Roberto.
 
-## 🔗 TP INTEGRADOR - MAATERIA DESASRROLLO WEB (BACKEND - FRONTEND) IFTS11 2025
+## 🔗 TP INTEGRADOR - MATERIA DESASRROLLO WEB (BACKEND - FRONTEND) IFTS11 2025
 Zammataro Gustavo - Balbuena Federico
