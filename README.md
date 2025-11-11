@@ -9,13 +9,7 @@
 npm install
 
 # Ejecutar en desarrollo
-npm run dev
-
-# Ejecutar en producción
-npm start
-
-# Cargar datos de prueba
-npm run cargar-datos
+npx nodemon src/server.js
 ```
 
 ## 🏗️ Arquitectura MVC
@@ -80,5 +74,10 @@ DELETE /api/mascotas-perdidas/:id  # Eliminar reporte perdida
 - **CORS:** Habilitado para http://localhost:4200
 
 ## 🔗 Conexión Frontend
-
 El backend está configurado para recibir requests del frontend Angular en puerto 4200.
+
+## 🔗 Equipo de desarrollo MVPP (Muy viernes para programar)
+Zacagnino Antonella - Reverol Gerarlis - Salva ivan - Singuri Roberto.
+
+## 🔗 TP INTEGRADOR - MAATERIA DESASRROLLO WEB (BACKEND - FRONTEND) IFTS11 2025
+Zammataro Gustavo - Balbuena Federico
