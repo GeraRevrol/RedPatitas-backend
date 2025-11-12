@@ -30,12 +30,14 @@ npx nodemon src/server.js
 - `adopcionMascotas.js` - CRUD completo mascotas adopción
 - `mascotasPerdidas.js` - CRUD completo mascotas perdidas
 
+### **⚙️ Configuración (src/config/)**
+- `database.js` - Configuración de conexión MongoDB
+- `conexion.js` - Conexión avanzada con variables de entorno
+
 ## 🔌 Middlewares
 
 - **CORS** - Comunicación con frontend Angular
 - **Express.json()** - Parsing JSON requests
-- **Mongoose** - ODM para MongoDB
-- **Multer** - Manejo de archivos/imágenes
 
 ## 📡 Endpoints API
 
@@ -65,7 +67,7 @@ DELETE /api/mascotas-perdidas/:id  # Eliminar reporte perdida
 - **MongoDB** - Base de datos NoSQL
 - **Mongoose** - ODM para MongoDB
 - **CORS** - Cross-Origin Resource Sharing
-- **Multer** - Manejo de archivos
+- **dotenv** - Variables de entorno
 
 ## ⚙️ Configuración
 
