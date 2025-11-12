@@ -23,12 +23,12 @@ npx nodemon src/server.js
 - `perdidasController.js` - Lógica CRUD mascotas perdidas
 
 ### **🔧 Servicios (src/servicios/)**
+- `adopcionService.js` - Lógica de negocio mascotas adopción
 - `perdidasService.js` - Lógica de negocio mascotas perdidas
 
 ### **🛣️ Rutas (src/rutas/)**
-- `public.js` - Endpoints públicos (GET)
-- `admin.js` - Endpoints administrativos (POST, PUT, DELETE)
-- `mascotasPerdidas.js` - Endpoints mascotas perdidas
+- `adopcionMascotas.js` - CRUD completo mascotas adopción
+- `mascotasPerdidas.js` - CRUD completo mascotas perdidas
 
 ## 🔌 Middlewares
 
@@ -41,17 +41,17 @@ npx nodemon src/server.js
 
 ### **Públicos**
 ```
-GET /api/publico/mascotas          # Listar mascotas adopción
-GET /api/publico/mascotas/:id      # Ver mascota específica
+GET /api/adopcion-mascotas         # Listar mascotas adopción
+GET /api/adopcion-mascotas/:id     # Ver mascota específica
 GET /api/mascotas-perdidas         # Listar mascotas perdidas
 GET /api/mascotas-perdidas/:id     # Ver mascota perdida específica
 ```
 
 ### **Administrativos**
 ```
-POST /api/admin/mascotas           # Crear mascota adopción
-PUT /api/admin/mascotas/:id        # Actualizar mascota adopción
-DELETE /api/admin/mascotas/:id     # Eliminar mascota adopción
+POST /api/adopcion-mascotas        # Crear mascota adopción
+PUT /api/adopcion-mascotas/:id     # Actualizar mascota adopción
+DELETE /api/adopcion-mascotas/:id  # Eliminar mascota adopción
 
 POST /api/mascotas-perdidas        # Reportar mascota perdida
 PUT /api/mascotas-perdidas/:id     # Actualizar reporte perdida
