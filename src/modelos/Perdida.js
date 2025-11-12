@@ -1,5 +1,8 @@
+// === MODELO DE MASCOTAS PERDIDAS ===
+// Define la estructura de reportes de mascotas perdidas para MongoDB
 const mongoose = require('mongoose');
 
+// Esquema de mascota perdida
 const mascotaPerdidaSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -39,7 +42,8 @@ const mascotaPerdidaSchema = new mongoose.Schema({
     default: 'Perdido'
   }
 }, {
-  timestamps: true
+  timestamps: true // Agrega createdAt y updatedAt automáticamente
 });
 
+// Exportar modelo - Crea colección "mascotaperdidas" en MongoDB
 module.exports = mongoose.model('MascotaPerdida', mascotaPerdidaSchema);

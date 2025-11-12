@@ -1,5 +1,8 @@
+// === MODELO DE ADOPCIÓN ===
+// Define la estructura de mascotas en adopción para MongoDB
 const mongoose = require('mongoose');
 
+// Esquema de mascota en adopción
 const petSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -30,7 +33,8 @@ const petSchema = new mongoose.Schema({
     default: ''
   }
 }, {
-  timestamps: true
+  timestamps: true // Agrega createdAt y updatedAt automáticamente
 });
 
+// Exportar modelo - Crea colección "pets" en MongoDB
 module.exports = mongoose.model('Pet', petSchema);
