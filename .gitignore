@@ -1,23 +1,2 @@
-# Variables de entorno
 .env
-.env.local
-.env.production
-
-# Dependencias
 node_modules/
-
-# Logs
-*.log
-npm-debug.log*
-
-# Archivos temporales
-.tmp/
-temp/
-
-# IDE
-.vscode/
-.idea/
-
-# Sistema operativo
-.DS_Store
-Thumbs.db
