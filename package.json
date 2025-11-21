@@ -1,28 +1,17 @@
 {
   "name": "redpatitas-backend",
   "version": "2.0.0",
-  "description": "Backend para RedPatitas - Arquitectura Controller->Service->Repository",
+  "description": "Backend para RedPatitas",
   "main": "index_server.js",
   "scripts": {
     "start": "node index_server.js",
-    "dev": "nodemon index_server.js",
-    "test-db": "node src/pruebas/test-mongodb.js",
-    "explorar-db": "node src/pruebas/explorar-colecciones.js",
-    "test-api": "node src/pruebas/test-api-endpoints.js",
-    "insertar-datos": "node src/pruebas/insertar-datos-ejemplo.js",
-    "test-arquitectura": "node src/pruebas/test-arquitectura.js",
-    "test-crud": "node src/pruebas/test-crud-completo.js",
-    "old-start": "node src/server.js",
-    "old-dev": "nodemon src/server.js"
+    "dev": "nodemon index_server.js"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.0",
-    "multer": "^2.0.2"
+    "mongoose": "^8.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
