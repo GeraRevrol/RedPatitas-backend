@@ -105,4 +105,4 @@ El backend está configurado para recibir requests del frontend Angular en puert
 Zacagnino Antonella - Reverol Gerarlis - Salva ivan - Singuri Roberto.
 
 ## 🔗 TP INTEGRADOR - MATERIA DESARROLLO WEB (BACKEND - FRONTEND) IFTS11 2025
-Zammataro Gustavo - Balbuena Federico
+Zammataro Gustavo - Balbuena Federico 
