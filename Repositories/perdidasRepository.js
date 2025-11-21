@@ -13,21 +13,6 @@ exports.getAllPerdidas = async () => {
     }
 };
 
-exports.getPerdidaById = async (id) => {
-    try {
-        console.log(`REPOSITORY - getPerdidaById - ID: ${id}`);
-        await getMongoDBConnection();
-        const mascota = await Perdida.findById(id);
-        if (!mascota) {
-            throw new Error('Mascota perdida no encontrada');
-        }
-        return mascota;
-    } catch (error) {
-        console.log(`Error en REPOSITORY - getPerdidaById: ${error}`);
-        throw new Error(`Error en REPOSITORY - getPerdidaById: ${error}`);
-    }
-};
-
 exports.createPerdida = async (datos) => {
     try {
         console.log(`REPOSITORY - createPerdida - Datos: ${JSON.stringify(datos)}`);

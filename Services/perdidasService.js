@@ -19,16 +19,6 @@ class PerdidasService {
     }
   }
 
-  async obtenerMascotaPerdidaPorId(id) {
-    try {
-      console.log(`SERVICE - obtenerMascotaPerdidaPorId - ID: ${id}`);
-      return await perdidasRepository.getPerdidaById(id);
-    } catch (error) {
-      console.log(`Error en SERVICE - obtenerMascotaPerdidaPorId: ${error}`);
-      throw error;
-    }
-  }
-
   async crearMascotaPerdida(datosMascota) {
     try {
       console.log("SERVICE - crearMascotaPerdida");

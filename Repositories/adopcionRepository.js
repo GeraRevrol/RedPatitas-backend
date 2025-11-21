@@ -12,21 +12,6 @@ exports.getAllAdopciones = async () => {
     }
 };
 
-exports.getAdopcionById = async (id) => {
-    try {
-        console.log(`REPOSITORY - getAdopcionById - ID: ${id}`);
-        await getMongoDBConnection();
-        const mascota = await Adopcion.findById(id);
-        if (!mascota) {
-            throw new Error('Mascota no encontrada');
-        }
-        return mascota;
-    } catch (error) {
-        console.log(`Error en REPOSITORY - getAdopcionById: ${error}`);
-        throw new Error(`Error en REPOSITORY - getAdopcionById: ${error}`);
-    }
-};
-
 exports.createAdopcion = async (datos) => {
     try {
         console.log(`REPOSITORY - createAdopcion - Datos: ${JSON.stringify(datos)}`);

@@ -28,25 +28,7 @@ class PerdidasController {
     }
   }
 
-  /**
-   * GET /api/mascotas-perdidas/:id - Obtener reporte específico por ID
-  */
 
-  async obtenerMascotaPerdidaPorId(req, res) {
-    try {
-      console.log("CONTROLLER - obtenerMascotaPerdidaPorId");
-      const { id } = req.params;
-      const mascota = await perdidasService.obtenerMascotaPerdidaPorId(id);
-      
-      mascota
-        ? res.status(200).json(mascota)
-        : res.status(404).json({ error: `Error 404 - No se encontró la mascota perdida con ID: ${id}` });
-      
-    } catch (error) {
-      console.log(`Error en CONTROLLER - obtenerMascotaPerdidaPorId: ${error}`);
-      res.status(500).json({ error: `Error 500 - ${error.message}` });
-    }
-  }
 
   /**
    * POST /api/mascotas-perdidas - Crear nuevo reporte de mascota perdida
