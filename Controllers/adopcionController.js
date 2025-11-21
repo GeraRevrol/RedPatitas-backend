@@ -29,26 +29,6 @@ class AdopcionController {
   }
 
   /**
-   * GET /api/adopcion-mascotas/:id - Obtener mascota específica por ID
-  */
-
-  async obtenerMascotaPorId(req, res) {
-    try {
-      console.log("CONTROLLER - obtenerMascotaPorId");
-      const { id } = req.params;
-      const mascota = await adopcionService.obtenerMascotaPorId(id);
-      
-      mascota
-        ? res.status(200).json(mascota)
-        : res.status(404).json({ error: `Error 404 - No se encontró la mascota con ID: ${id}` });
-      
-    } catch (error) {
-      console.log(`Error en CONTROLLER - obtenerMascotaPorId: ${error}`);
-      res.status(500).json({ error: `Error 500 - ${error.message}` });
-    }
-  }
-
-  /**
    * POST /api/adopcion-mascotas - Crear nueva mascota para adopción
   */
 

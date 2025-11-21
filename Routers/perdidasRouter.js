@@ -7,9 +7,6 @@ const perdidasController = require('../Controllers/perdidasController');
 // GET /api/mascotas-perdidas - Obtener todas las mascotas perdidas
 router.get('/', perdidasController.obtenerTodasLasMascotasPerdidas);
 
-// GET /api/mascotas-perdidas/:id - Obtener una mascota perdida por ID
-router.get('/:id', perdidasController.obtenerMascotaPerdidaPorId);
-
 // POST /api/mascotas-perdidas - Crear nuevo reporte de mascota perdida
 router.post('/', perdidasController.crearMascotaPerdida);
 

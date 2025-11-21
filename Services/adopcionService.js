@@ -19,16 +19,6 @@ class AdopcionService {
     }
   }
 
-  async obtenerMascotaPorId(id) {
-    try {
-      console.log(`SERVICE - obtenerMascotaPorId - ID: ${id}`);
-      return await adopcionRepository.getAdopcionById(id);
-    } catch (error) {
-      console.log(`Error en SERVICE - obtenerMascotaPorId: ${error}`);
-      throw error;
-    }
-  }
-
   async crearMascota(datosMascota) {
     try {
       console.log("SERVICE - crearMascota");
