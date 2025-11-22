@@ -8,8 +8,9 @@ exports.getMongoDBConnection = async () => {
     await mongoose.connect(URI_MONGO_DB);
     console.log('DATABASE - MongoDB conectado correctamente');
   } catch (error) {
-    console.log(`Error en getMongoDBConnection: ${error}`);
-    throw error;
+    console.log(`Error crítico en MongoDB: ${error}`);
+    console.log('La aplicación no puede funcionar sin base de datos');
+    process.exit(1);
   }
 };
 
