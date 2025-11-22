@@ -1,10 +1,12 @@
 const Adopcion = require('./models/Adopcion');
 const { getMongoDBConnection } = require('../database/conexion');
 
+// Conectar una sola vez al cargar el módulo
+getMongoDBConnection();
+
 exports.getAllAdopciones = async () => {
     try {
         console.log("REPOSITORY - getAllAdopciones");
-        await getMongoDBConnection();
         return await Adopcion.find();
     } catch (error) {
         console.log(`Error en REPOSITORY - getAllAdopciones: ${error}`);
@@ -15,7 +17,6 @@ exports.getAllAdopciones = async () => {
 exports.createAdopcion = async (datos) => {
     try {
         console.log(`REPOSITORY - createAdopcion - Datos: ${JSON.stringify(datos)}`);
-        await getMongoDBConnection();
         const mascota = new Adopcion(datos);
         return await mascota.save();
     } catch (error) {
@@ -27,7 +28,6 @@ exports.createAdopcion = async (datos) => {
 exports.updateAdopcion = async (id, datos) => {
     try {
         console.log(`REPOSITORY - updateAdopcion - ID: ${id} - Datos: ${JSON.stringify(datos)}`);
-        await getMongoDBConnection();
         const mascota = await Adopcion.findByIdAndUpdate(id, datos, { new: true });
         if (!mascota) {
             throw new Error('Mascota no encontrada');
@@ -42,7 +42,6 @@ exports.updateAdopcion = async (id, datos) => {
 exports.deleteAdopcion = async (id) => {
     try {
         console.log(`REPOSITORY - deleteAdopcion - ID: ${id}`);
-        await getMongoDBConnection();
         const mascota = await Adopcion.findByIdAndDelete(id);
         if (!mascota) {
             throw new Error('Mascota no encontrada');

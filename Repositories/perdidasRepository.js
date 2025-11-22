@@ -1,10 +1,12 @@
 const Perdida = require('./models/Perdida');
 const { getMongoDBConnection } = require('../database/conexion');
 
+// Conectar una sola vez al cargar el módulo
+getMongoDBConnection();
+
 exports.getAllPerdidas = async () => {
     try {
         console.log("REPOSITORY - getAllPerdidas");
-        await getMongoDBConnection();
         const mascotas = await Perdida.find();
         return mascotas || [];
     } catch (error) {
@@ -16,7 +18,6 @@ exports.getAllPerdidas = async () => {
 exports.createPerdida = async (datos) => {
     try {
         console.log(`REPOSITORY - createPerdida - Datos: ${JSON.stringify(datos)}`);
-        await getMongoDBConnection();
         const mascota = new Perdida(datos);
         return await mascota.save();
     } catch (error) {
@@ -28,7 +29,6 @@ exports.createPerdida = async (datos) => {
 exports.updatePerdida = async (id, datos) => {
     try {
         console.log(`REPOSITORY - updatePerdida - ID: ${id} - Datos: ${JSON.stringify(datos)}`);
-        await getMongoDBConnection();
         const mascota = await Perdida.findByIdAndUpdate(id, datos, { new: true });
         if (!mascota) {
             throw new Error('Mascota perdida no encontrada');
@@ -43,7 +43,6 @@ exports.updatePerdida = async (id, datos) => {
 exports.deletePerdida = async (id) => {
     try {
         console.log(`REPOSITORY - deletePerdida - ID: ${id}`);
-        await getMongoDBConnection();
         const mascota = await Perdida.findByIdAndDelete(id);
         if (!mascota) {
             throw new Error('Mascota perdida no encontrada');
