@@ -43,7 +43,7 @@ class AdopcionController {
       
     } catch (error) {
       console.log(`Error en CONTROLLER - crearMascota: ${error}`);
-      res.status(400).json({ error: `Error 400 - Datos inválidos: ${error.message}` });
+      res.status(500).json({ error: `Error 500 - ${error.message}` });
     }
   }
 
